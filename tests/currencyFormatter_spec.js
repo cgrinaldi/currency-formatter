@@ -3,8 +3,13 @@ var currencyFormatter = require('../currencyFormatter.js');
 
 describe('currencyFormatter', () => {
 
-  it('should return true', () => {
-    expect(true).to.equal(true);
+
+  it('should throw an error when value less than 0 provided', () => {
+    expect(currencyFormatter.bind(-0.5)).to.throw(Error);
+  });
+
+  it('should throw an error when value is not a number', () => {
+    expect(currencyFormatter.bind('cat')).to.throw(Error);
   });
 
   it('should correctly format test cases', () => {
