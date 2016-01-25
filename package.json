@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'tests/currencyFormatter_spec.js'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel-core": "^6.4.5",
     "chai": "^3.4.1",
     "mocha": "^2.3.4"
   }
