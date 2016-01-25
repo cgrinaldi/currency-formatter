@@ -15,7 +15,7 @@ currencyFormatter.prototype.formatCurrency = function () {
   var integer = Math.floor(this.val);
   var decimal = this.val % 1;
   var num32nds = helpers.convertTo32nds(decimal);
-  return helpers.padStrings(integer) + '-' + helpers.padStrings(num32nds);
+  return helpers.convertAndPadString(integer) + '-' + helpers.convertAndPadString(num32nds);
 };
 
 module.exports = currencyFormatter;

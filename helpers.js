@@ -7,11 +7,13 @@ module.exports = {
     }
   },
 
-  padStrings: function(num) {
+  // TODO: Refactor into two different functions
+  // TODO: Allow user to pad a variable number of 0s
+  convertAndPadString: function(num) {
     if (num < 10) {
       return '0' + num;
     }
-    return num;
+    return '' + num;
   }
 
 };
